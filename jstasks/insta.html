@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram Login</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    main {
+      margin: 0 auto;
+      width: 500px;
+    }
+
+    form {
+      padding: 20px;
+    }
+
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="instagram-logo.png" alt="Instagram Logo">
+  </header>
+  <main>
+    <form action="/login" method="post">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <button type="submit">Log in</button>
+    </form>
+  </main>
+  <footer>
+    <p>Don't have an account? <a href="/signup">Sign up here.</a></p>
+  </footer>
+  <script>
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function(event) {
+      // Validate the user input
+
+      // If the input is valid, submit the form
+      event.preventDefault();
+      form.submit();
+    });
+  </script>
+</body>
+</html>
