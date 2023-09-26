@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlz9w5xkODNAXCQf7pjuFofdF3PyflfF6zZZW4bs5U+JkO5AHwOjzASWJtE6a3Y" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        
+        <form>
+            <table class="table">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" class="form-control" placeholder="Enter your first name"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" class="form-control" placeholder="Enter your last name"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" class="form-control" placeholder="Enter your email"></td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td><input type="tel" class="form-control" placeholder="Enter your phone number"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input type="text" class="form-control" placeholder="Enter your address"></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><input type="text" class="form-control" placeholder="Enter your city"></td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td>
+                        <select class="form-select">
+                            <option selected>Please select your state</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <!-- Add more states as needed -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Do you have strong hosting?</td>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="strongHosting" value="yes">
+                            <label class="form-check-label">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="strongHosting" value="no">
+                            <label class="form-check-label">No</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Project Description</td>
+                    <td><textarea class="form-control" rows="4" placeholder="Enter your project description"></textarea></td>
+                </tr>
+            </table>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-FgS/C2pQQJZ6Ou2zOs3flVr/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</body>
+</html>
