@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Animation</title>
+    <style>
+        p{
+            color:blue;
+
+
+        }
+        /* Add CSS styles for the image */
+        #myImage {
+            position: relative;
+            left: 0px;
+        }
+    </style>
+    <script>
+        var imgObj = null;
+        var animationId = null;
+
+        function init() {
+            imgObj = document.getElementById('myImage');
+        }
+
+        function moveRight() {
+            var left = parseInt(imgObj.style.left) || 0;
+
+            // Move the image 10 pixels to the right
+            imgObj.style.left = left + 10 + 'px';
+
+            // Repeat the animation
+            animationId = requestAnimationFrame(moveRight);
+        }
+
+        function startAnimation() {
+            if (!animationId) {
+                // Start the animation if not already running
+                moveRight();
+            }
+        }
+
+        function stopAnimation() {
+            if (animationId) {
+                // Stop the animation if it's running
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+        }
+
+        window.onload = init;
+    </script>
+</head>
+<body>
+    <form>
+        <img id="myImage" src="img.png" alt="HTML Logo" />
+        <p>Click the following buttons to handle the animation.</p>
+        <button type="button" onclick="startAnimation()">Start</button>
+        <button type="button" onclick="stopAnimation()">Stop</button>
+    </form>
+</body>
+</html>
